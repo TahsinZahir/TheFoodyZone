@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Foody Zone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>The Foody Zone</h1>
+        <nav>
+            <button id="login-btn">Login</button>
+            <button id="toggle-dark-mode">Dark Mode</button>
+            <button class="hamburger">☰</button>
+            <ul>
+                <li><button id="theme-toggle">Toggle Theme</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Your Cart</h2>
+        <ul id="cart"></ul>
+        <p id="total-price">Total: Rs.0</p>
+        <button id="confirm-order" style="display: none;">Confirm Order</button>
+
+        <h2>Ultimate Solution Of Your Hunger</h2>
+        <input type="text" id="search" placeholder="Search for food..." style="margin-bottom: 20px; padding: 10px; width: 100%;">
+        
+        <select id="filter" style="margin-bottom: 10px;">
+            <option value="">All Items</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Non-Vegetarian">Non-Vegetarian</option>
+        </select>
+
+        <select id="sort" style="margin-bottom: 20px;">
+            <option value="default">Sort By</option>
+            <option value="price">Price</option>
+            <option value="popularity">Popularity</option>
+        </select>
+
+        <div id="menu"></div>
+    </main>
+
+    <footer>
+        <p>&copy; The Foody Zone...Fast,Fresh,Free delivery!</p>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="submit-login">Login</button>
+        </div>
+    </div>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="message"></p>
+            <button class="yes">Yes</button>
+            <button class="no">No</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
